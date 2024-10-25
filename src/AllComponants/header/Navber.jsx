@@ -61,7 +61,7 @@ const Navber = () => {
             </li>
           </ul>
         </div>
-          <a className="btn font-semibold text-lg text-gray-700">0 Coin <img className='w-10 h-10' src={coin} alt="" /></a>
+          <a className="btn font-semibold text-lg text-gray-700">0 Coin <img className='w-8 h-8' src={coin} alt="" /></a>
         </div>
       </div>
       </div>

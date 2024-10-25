@@ -1,5 +1,6 @@
 import "./App.css";
-import Navber from './AllComponants/header/Navber';
+import Navber from "./AllComponants/header/Navber";
+import Banner from "./AllComponants/header/Banner";
 
 function App() {
   return (
@@ -9,14 +10,10 @@ function App() {
         {/* nav section  */}
         <Navber></Navber>
         {/* banner section */}
-        
+        <Banner></Banner>
       </header>
       {/* main section start */}
-      <main>
-        <h1 className="text-center text-5xl font-bold">Welcome to my world</h1>
-        <h1 className="text-center text-5xl font-bold">Welcome to my world</h1>
-        <h1 className="text-center text-5xl font-bold">Welcome to my world</h1>
-      </main>
+      <main></main>
       {/* footer sectiob start */}
       <footer></footer>
     </>
