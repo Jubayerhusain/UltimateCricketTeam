@@ -1,4 +1,5 @@
 import "./App.css";
+import Navber from './AllComponants/header/Navber';
 
 function App() {
   return (
@@ -6,7 +7,9 @@ function App() {
       {/* header section  start*/}
       <header>
         {/* nav section  */}
+        <Navber></Navber>
         {/* banner section */}
+        
       </header>
       {/* main section start */}
       <main>
