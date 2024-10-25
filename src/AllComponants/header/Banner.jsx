@@ -3,7 +3,7 @@ import bgShadow from "../../assets/bg-shadow.png";
 const Banner = () => {
   return (
     <div className="">
-      <div className="my-6 ">
+      <div className="mt-6 ">
         <div
           className="hero min-h-[720px] w-11/12 mx-auto rounded-3xl  bg-black"
           style={{
