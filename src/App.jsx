@@ -12,6 +12,7 @@ function App() {
       <main>
         <h1 className="text-center text-5xl font-bold">Welcome to my world</h1>
         <h1 className="text-center text-5xl font-bold">Welcome to my world</h1>
+        <h1 className="text-center text-5xl font-bold">Welcome to my world</h1>
       </main>
       {/* footer sectiob start */}
       <footer></footer>
