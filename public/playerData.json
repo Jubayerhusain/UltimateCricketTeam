@@ -2,6 +2,7 @@
     "players": [
       {
         "id": 1,
+        "img":"",
         "name": "Shakib Al Hasan",
         "age": 36,
         "role": "All-rounder",

@@ -37,7 +37,7 @@ function App() {
       </header>
       {/* main section start */}
       <main>
-        <div className=" h-[400px] w-11/12 mx-auto">
+        <div className="h-[400px] w-11/12 mx-auto">
           <AllPlayers
             isActive={isActive}
             handleCartStatus={handleCartStatus}

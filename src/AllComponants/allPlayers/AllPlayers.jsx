@@ -1,11 +1,15 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Available from "../AvailabePlayers/Available";
 import Selected from "../selectedPlayers/Selected";
 const AllPlayers = ({ handleCartStatus, isActive }) => {
-//   console.log(handleCartStatus);
-    const [allPlayers, setAllPlayers] = useState([]);
-    
+  //   console.log(handleCartStatus);
+  const [allPlayers, setAllPlayers] = useState([]);
+  useEffect(() => {
+    fetch(`playerData.json`)
+      .then((response) => response.json())
+      .then((data) => setAllPlayers(data.players));
+  }, []);
   return (
     <div>
       <div className="flex justify-end items-center  bg-white py-5 rounded-xl">
@@ -30,7 +34,21 @@ const AllPlayers = ({ handleCartStatus, isActive }) => {
           Selected 0
         </button>
       </div>
-      {isActive.available ? <Available></Available> : <Selected></Selected>}
+      <div>
+        {isActive.status === "available" ? (
+          <div>
+            <h1 className="text-3xl text-gray-900 font-bold">Available Players</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+              {allPlayers.map((player) => (
+                <Available key={player.id} player={player} />
+              ))}
+            </div>
+          </div>
+        ) : (
+          <Selected />
+        )}
+      </div>
+      {/* {isActive.available ? <Available ></Available> : <Selected></Selected>} */}
     </div>
   );
 };
