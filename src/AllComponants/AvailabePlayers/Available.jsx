@@ -16,8 +16,8 @@ const Available = ({ player, disPlaySelectPlayer }) => {
   return (
     <div>
       <div>
-        <div className="card bg-base-100 w-96 h-[560px] mx-auto mt-10 shadow-xl">
-          <figure className=" w-[380px] ">
+        <div className="card bg-base-100 w-[370px] h-[560px] mx-auto mt-10 shadow-xl">
+          <figure className=" w-100% ">
             <img
               className="w-full object-fill rounded-lg h-full"
               src={img}
