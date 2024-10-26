@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import Available from "../AvailabePlayers/Available";
 import Selected from "../selectedPlayers/Selected";
 const AllPlayers = ({ handleCartStatus, isActive, freeCradit,setFreeCadit }) => {
-  //   console.log(handleCartStatus);
   const [allPlayers, setAllPlayers] = useState([]);
   useEffect(() => {
     fetch(`playerData.json`)
@@ -14,9 +13,7 @@ const AllPlayers = ({ handleCartStatus, isActive, freeCradit,setFreeCadit }) => 
   }, []);
 
   const [selectedplayers, setSelectedPlayers] = useState([]);
-  // console.log(selectedplayers);
   const deleteHundleBtn = (id) =>{
-    console.log(id);
     const remainingplayer = selectedplayers.filter((p)=>p.id!=id)
     setSelectedPlayers(remainingplayer)
   }
