@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 const Available = ({ player,disPlaySelectPlayer }) => {
-  // console.log(disPlaySelectPlayer);
-  // console.log(player);
   const { name, age, role, battingStyle, bowlingStyle, team, price, img, flag } =
     player;
 

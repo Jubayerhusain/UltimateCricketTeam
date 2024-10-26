@@ -13,10 +13,16 @@ const AllPlayers = ({ handleCartStatus, isActive }) => {
 
   const [selectedplayers, setSelectedPlayers] = useState([]);
   const disPlaySelectPlayer = (player) => {
-    const addnewPlayer = [...selectedplayers, player]
+    const existingPlayer = selectedplayers.find(selected => selected.id === player.id);
+    if(existingPlayer){
+      alert('Player All ready selected')
+    }
+    else{
+      const addnewPlayer = [...selectedplayers, player]
     setSelectedPlayers(addnewPlayer);
+    }
   }
-  console.log(selectedplayers);
+  // console.log(selectedplayers);
 
   return (
     <div>
@@ -57,7 +63,7 @@ const AllPlayers = ({ handleCartStatus, isActive }) => {
             </div>
           </div>
         ) : (
-          <Selected />
+          <Selected selectedplayers={selectedplayers}/>
         )}
       </div>
       {/* {isActive.available ? <Available ></Available> : <Selected></Selected>} */}
