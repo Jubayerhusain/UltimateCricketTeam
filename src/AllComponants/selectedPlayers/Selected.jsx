@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const Selected = ({ selectedplayers, handleCartStatus, isActive }) => {
+const Selected = ({ selectedplayers, handleCartStatus, isActive, deleteHundleBtn }) => {
   return (
     <div>
       <h1 className="text-3xl text-gray-900 font-bold">
@@ -19,7 +19,7 @@ const Selected = ({ selectedplayers, handleCartStatus, isActive }) => {
               </div>
             </div>
             <div>
-              <button className="btn btn-error text-white">
+              <button onClick={()=>deleteHundleBtn(player.id)} className="btn btn-error text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"

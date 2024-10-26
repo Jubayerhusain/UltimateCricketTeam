@@ -14,6 +14,12 @@ const AllPlayers = ({ handleCartStatus, isActive, freeCradit,setFreeCadit }) => 
   }, []);
 
   const [selectedplayers, setSelectedPlayers] = useState([]);
+  // console.log(selectedplayers);
+  const deleteHundleBtn = (id) =>{
+    console.log(id);
+    const remainingplayer = selectedplayers.filter((p)=>p.id!=id)
+    setSelectedPlayers(remainingplayer)
+  }
   const disPlaySelectPlayer = (player) => {
     const existingPlayer = selectedplayers.find(
       (selected) => selected.id === player.id
@@ -90,6 +96,7 @@ const AllPlayers = ({ handleCartStatus, isActive, freeCradit,setFreeCadit }) => 
           </div>
         ) : (
           <Selected
+          deleteHundleBtn={deleteHundleBtn}
             selectedplayers={selectedplayers}
             handleCartStatus={handleCartStatus}
             isActive={isActive}
