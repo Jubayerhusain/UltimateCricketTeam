@@ -27,14 +27,19 @@ function App() {
     }
   };
 
+  const [freeCradit, setFreeCadit] = useState(0);
+  const addCoinToFreeCadit = (cradit) => {
+    setFreeCadit(freeCradit => freeCradit+cradit)
+  };
+  console.log(freeCradit);
   return (
     <>
       {/* header section  start */}
-      <header >
+      <header>
         {/* nav section  */}
-        <Navber></Navber>
+        <Navber freeCradit={freeCradit}></Navber>
         {/* banner section */}
-        <Banner></Banner>
+        <Banner addCoinToFreeCadit={addCoinToFreeCadit}></Banner>
       </header>
       {/* main section start */}
       <main>

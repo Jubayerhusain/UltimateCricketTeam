@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import bannerMain from "../../assets/banner-main.png";
 import bgShadow from "../../assets/bg-shadow.png";
-const Banner = () => {
+const Banner = ({addCoinToFreeCadit}) => {
   return (
     <div className="">
       <div className="mt-6 ">
@@ -19,7 +20,7 @@ const Banner = () => {
               </h1>
               <p className="mb-5">Beyond Boundaries Beyond Limits</p>
               <div className="border-2 border-[#E7FE29] p-1 rounded-xl hover:border-red-200">
-                <button className=" rounded-lg border-none btn text-lg btn-primary bg-[#E7FE29] text-black font-semibold hover:bg-red-200">
+                <button onClick={()=>addCoinToFreeCadit(999666)} className=" rounded-lg border-none btn text-lg btn-primary bg-[#E7FE29] text-black font-semibold hover:bg-red-200">
                   Claim Free Credit
                 </button>
               </div>

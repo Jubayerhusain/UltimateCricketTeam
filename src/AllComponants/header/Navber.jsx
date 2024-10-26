@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import logoImage from '../../assets/logo.png'
 import coin from '../../assets/coin.png'
 
-const Navber = () => {
+const Navber = ({freeCradit}) => {
   return (
     <div className="w-full sticky top-0 bg-white shadow-md z-10 ">
       <div className='w-11/12 mx-auto'>
@@ -62,7 +63,7 @@ const Navber = () => {
               </ul>
             </div>
             <a className="btn font-semibold text-lg text-gray-700">
-              0 Coin <img className='w-8 h-8' src={coin} alt="Coin" />
+              {freeCradit} Coin <img className='w-8 h-8' src={coin} alt="Coin" />
             </a>
           </div>
         </div>
