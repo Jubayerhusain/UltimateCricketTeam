@@ -63,7 +63,7 @@ const AllPlayers = ({ handleCartStatus, isActive }) => {
             </div>
           </div>
         ) : (
-          <Selected selectedplayers={selectedplayers}/>
+          <Selected selectedplayers={selectedplayers} handleCartStatus={handleCartStatus} isActive={isActive}/>
         )}
       </div>
       {/* {isActive.available ? <Available ></Available> : <Selected></Selected>} */}
