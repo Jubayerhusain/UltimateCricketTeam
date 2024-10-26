@@ -1,126 +1,147 @@
 {
-    "players": [
-      {
-        "id": 1,
-        "img":"",
-        "name": "Shakib Al Hasan",
-        "age": 36,
-        "role": "All-rounder",
-        "battingStyle": "Left-handed",
-        "bowlingStyle": "Slow left-arm orthodox",
-        "team": "Bangladesh",
-        "price": 5000000
-      },
-      {
-        "id": 2,
-        "name": "Tamim Iqbal",
-        "age": 35,
-        "role": "Batsman",
-        "battingStyle": "Left-handed",
-        "bowlingStyle": "Right-arm off-break",
-        "team": "Bangladesh",
-        "price": 4000000
-      },
-      {
-        "id": 3,
-        "name": "Virat Kohli",
-        "age": 35,
-        "role": "Batsman",
-        "battingStyle": "Right-handed",
-        "bowlingStyle": "Right-arm medium",
-        "team": "India",
-        "price": 7000000
-      },
-      {
-        "id": 4,
-        "name": "Kane Williamson",
-        "age": 33,
-        "role": "Batsman",
-        "battingStyle": "Right-handed",
-        "bowlingStyle": "Right-arm off-break",
-        "team": "New Zealand",
-        "price": 5500000
-      },
-      {
-        "id": 5,
-        "name": "Babar Azam",
-        "age": 29,
-        "role": "Batsman",
-        "battingStyle": "Right-handed",
-        "bowlingStyle": "Right-arm off-break",
-        "team": "Pakistan",
-        "price": 6000000
-      },
-      {
-        "id": 6,
-        "name": "Jasprit Bumrah",
-        "age": 30,
-        "role": "Bowler",
-        "battingStyle": "Right-handed",
-        "bowlingStyle": "Right-arm fast",
-        "team": "India",
-        "price": 5000000
-      },
-      {
-        "id": 7,
-        "name": "Pat Cummins",
-        "age": 31,
-        "role": "Bowler",
-        "battingStyle": "Right-handed",
-        "bowlingStyle": "Right-arm fast",
-        "team": "Australia",
-        "price": 6000000
-      },
-      {
-        "id": 8,
-        "name": "Ben Stokes",
-        "age": 32,
-        "role": "All-rounder",
-        "battingStyle": "Left-handed",
-        "bowlingStyle": "Right-arm fast-medium",
-        "team": "England",
-        "price": 6500000
-      },
-      {
-        "id": 9,
-        "name": "David Warner",
-        "age": 37,
-        "role": "Batsman",
-        "battingStyle": "Left-handed",
-        "bowlingStyle": "Right-arm leg-spin",
-        "team": "Australia",
-        "price": 4500000
-      },
-      {
-        "id": 10,
-        "name": "Trent Boult",
-        "age": 34,
-        "role": "Bowler",
-        "battingStyle": "Right-handed",
-        "bowlingStyle": "Left-arm fast-medium",
-        "team": "New Zealand",
-        "price": 5200000
-      },
-      {
-        "id": 11,
-        "name": "Joe Root",
-        "age": 33,
-        "role": "Batsman",
-        "battingStyle": "Right-handed",
-        "bowlingStyle": "Right-arm off-break",
-        "team": "England",
-        "price": 4800000
-      },
-      {
-        "id": 12,
-        "name": "Shaheen Afridi",
-        "age": 24,
-        "role": "Bowler",
-        "battingStyle": "Left-handed",
-        "bowlingStyle": "Left-arm fast",
-        "team": "Pakistan",
-        "price": 5300000
-      }
-    ]
-  }
-  
+  "players": [
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/CWWdBzp/sample-image.png",
+      "flag": "https://flagcdn.com/w320/bd.png",
+      "age": 36,
+      "role": "All-rounder",
+      "battingStyle": "Left-handed",
+      "bowlingStyle": "Slow left-arm orthodox",
+      "team": "Bangladesh",
+      "price": 5000000
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/28LTgqq/Tamim-Iqbal.jpg",
+      "flag": "https://flagcdn.com/w320/bd.png",
+      "name": "Tamim Iqbal",
+      "age": 35,
+      "role": "Batsman",
+      "battingStyle": "Left-handed",
+      "bowlingStyle": "Right-arm off-break",
+      "team": "Bangladesh",
+      "price": 4000000
+    },
+    {
+      "id": 3,
+      "img": "https://i.ibb.co/VCk17MK/Virat-Kohli.jpg",
+      "flag": "https://flagcdn.com/w320/in.png",
+      "name": "Virat Kohli",
+      "age": 35,
+      "role": "Batsman",
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Right-arm medium",
+      "team": "India",
+      "price": 7000000
+    },
+    {
+      "id": 4,
+      "img": "https://i.ibb.co/vmLsCtn/Kane-Williamson.jpg",
+      "flag": "https://flagcdn.com/w320/nz.png",
+      "name": "Kane Williamson",
+      "age": 33,
+      "role": "Batsman",
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Right-arm off-break",
+      "team": "New Zealand",
+      "price": 5500000
+    },
+    {
+      "id": 5,
+      "img": "https://i.ibb.co/njvLc3h/Babar-Azam.jpg",
+      "flag": "https://flagcdn.com/w320/pk.png",
+      "name": "Babar Azam",
+      "age": 29,
+      "role": "Batsman",
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Right-arm off-break",
+      "team": "Pakistan",
+      "price": 6000000
+    },
+    {
+      "id": 6,
+      "img": "https://i.ibb.co/TT8CTLR/Jasprit-Bumrah.jpg",
+      "flag": "https://flagcdn.com/w320/in.png",
+      "name": "Jasprit Bumrah",
+      "age": 30,
+      "role": "Bowler",
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Right-arm fast",
+      "team": "India",
+      "price": 5000000
+    },
+    {
+      "id": 7,
+      "img": "https://i.ibb.co/Lt1B5Wk/pat-cummins.jpg",
+      "flag": "https://flagcdn.com/w320/au.png",
+      "name": "Pat Cummins",
+      "age": 31,
+      "role": "Bowler",
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Right-arm fast",
+      "team": "Australia",
+      "price": 6000000
+    },
+    {
+      "id": 8,
+      "img": "https://i.ibb.co/t2vmQPf/ben-stokes.jpg",
+      "flag": "https://flagcdn.com/w320/gb.png",
+      "name": "Ben Stokes",
+      "age": 32,
+      "role": "All-rounder",
+      "battingStyle": "Left-handed",
+      "bowlingStyle": "Right-arm fast-medium",
+      "team": "England",
+      "price": 6500000
+    },
+    {
+      "id": 9,
+      "img": "https://i.ibb.co/M7q5WVj/david-warner.jpg",
+      "flag": "https://flagcdn.com/w320/au.png",
+      "name": "David Warner",
+      "age": 37,
+      "role": "Batsman",
+      "battingStyle": "Left-handed",
+      "bowlingStyle": "Right-arm leg-spin",
+      "team": "Australia",
+      "price": 4500000
+    },
+    {
+      "id": 10,
+      "img": "https://i.ibb.co/PxVDHfj/trent-boult.jpg",
+      "flag": "https://flagcdn.com/w320/nz.png",
+      "name": "Trent Boult",
+      "age": 34,
+      "role": "Bowler",
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Left-arm fast-medium",
+      "team": "New Zealand",
+      "price": 5200000
+    },
+    {
+      "id": 11,
+      "img": "https://i.ibb.co/tXQ7wCG/joe-root.jpg",
+      "flag": "https://flagcdn.com/w320/gb.png",
+      "name": "Joe Root",
+      "age": 33,
+      "role": "Batsman",
+      "battingStyle": "Right-handed",
+      "bowlingStyle": "Right-arm off-break",
+      "team": "England",
+      "price": 4800000
+    },
+    {
+      "id": 12,
+      "img": "https://i.ibb.co/ZK0GzHz/shaheen-afridi.jpg",
+      "flag": "https://flagcdn.com/w320/pk.png",
+      "name": "Shaheen Afridi",
+      "age": 24,
+      "role": "Bowler",
+      "battingStyle": "Left-handed",
+      "bowlingStyle": "Left-arm fast",
+      "team": "Pakistan",
+      "price": 5300000
+    }
+  ]
+}
