@@ -22,7 +22,7 @@ const Available = ({ player }) => {
               <h2 className="card-title">Name: {name}</h2>
             </div>
             <div className="justify-between items-center flex">
-              <div className="flex items-center">
+              <div className="flex items-center space-x-1">
                 <img className="h-4 w-6" src={flag} alt="" />
                 <h2 className="text-lg font-normal text-gray-500">{team}</h2>
               </div>
