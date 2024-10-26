@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
 import { useEffect, useState } from "react";
 import Available from "../AvailabePlayers/Available";
 import Selected from "../selectedPlayers/Selected";
@@ -15,17 +17,28 @@ const AllPlayers = ({ handleCartStatus, isActive }) => {
   const disPlaySelectPlayer = (player) => {
     const existingPlayer = selectedplayers.find(selected => selected.id === player.id);
     if(existingPlayer){
-      alert('Player All ready selected')
+      toast.error('Player All ready selected',{
+        autoClose: 2000,
+      })
+    }
+    else if (selectedplayers.length >= 6) {
+      toast.error('You can select only 6 players',{
+        autoClose: 2000,
+      });
     }
     else{
       const addnewPlayer = [...selectedplayers, player]
     setSelectedPlayers(addnewPlayer);
+    toast.success('Player added successfully', {
+      autoClose: 2000,
+    });
     }
   }
   // console.log(selectedplayers);
 
   return (
     <div>
+      <ToastContainer />
       <div className=" sticky top-0 z-10 backdrop-blur-sm">
         <div className="flex justify-end items-center  bg-transparent py-5 rounded-xl ">
           <button
@@ -39,14 +52,14 @@ const AllPlayers = ({ handleCartStatus, isActive }) => {
             Available
           </button>
           <button
-            onClick={() => handleCartStatus("selected")}
+            onClick={() =>handleCartStatus("selected")}
             className={`${
               isActive.available
                 ? "text-gray-500 bg-gray-100 font-semibold"
                 : "bg-[#E7FE29] text-gray-700 font-semibold"
             } px-5 py-3 border-none text-xl rounded-r-lg`}
           >
-            Selected 0
+            Selected {selectedplayers.length}
           </button>
         </div>
       </div>

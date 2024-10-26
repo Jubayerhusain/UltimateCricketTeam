@@ -3,7 +3,7 @@ const Selected = ({ selectedplayers, handleCartStatus, isActive }) => {
   return (
     <div>
       <h1 className="text-3xl text-gray-900 font-bold">
-        Selected Player (4/6)
+        Selected Player ({selectedplayers.length}/6)
       </h1>
       {selectedplayers.map((player, index) => (
         <div key={index}>
@@ -34,7 +34,7 @@ const Selected = ({ selectedplayers, handleCartStatus, isActive }) => {
                     d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
-                Remove
+                
               </button>
             </div>
           </div>
