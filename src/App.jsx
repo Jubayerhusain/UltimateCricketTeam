@@ -5,7 +5,6 @@ import "./App.css";
 import Navber from "./AllComponants/header/Navber";
 import Banner from "./AllComponants/header/Banner";
 import AllPlayers from "./AllComponants/allPlayers/AllPlayers";
-import Footer from './AllComponants/Footer/Footer';
 
 function App() {
   const [isActive, setIsActive] = useState({
@@ -47,7 +46,6 @@ function App() {
       </main>
       {/* footer section start */}
       <footer>
-        <Footer></Footer>
       </footer>
     </>
   );
