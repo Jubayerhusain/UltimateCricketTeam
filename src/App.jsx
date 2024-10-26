@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       {/* header section  start */}
-      <header>
+      <header >
         {/* nav section  */}
         <Navber></Navber>
         {/* banner section */}

@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-const Available = ({ player }) => {
-  console.log(player);
+const Available = ({ player,disPlaySelectPlayer }) => {
+  // console.log(disPlaySelectPlayer);
+  // console.log(player);
   const { name, age, role, battingStyle, bowlingStyle, team, price, img, flag } =
     player;
 
@@ -41,7 +42,7 @@ const Available = ({ player }) => {
               <h1 className="text-xl font-semibold text-gray-700">
                 Price: ${price}
               </h1>
-              <button className="btn">Choose Player</button>
+              <button onClick={()=>disPlaySelectPlayer(player)} className="btn">Choose Player</button>
             </div>
           </div>
         </div>

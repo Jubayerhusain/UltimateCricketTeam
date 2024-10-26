@@ -10,9 +10,17 @@ const AllPlayers = ({ handleCartStatus, isActive }) => {
       .then((response) => response.json())
       .then((data) => setAllPlayers(data.players));
   }, []);
+
+  const [selectedplayers, setSelectedPlayers] = useState([]);
+  const disPlaySelectPlayer = (player) => {
+    const addnewPlayer = [...selectedplayers, player]
+    setSelectedPlayers(addnewPlayer);
+  }
+  console.log(selectedplayers);
+
   return (
     <div>
-      <div className=" sticky top-0 z-20 backdrop-blur-sm">
+      <div className=" sticky top-0 z-10 backdrop-blur-sm">
         <div className="flex justify-end items-center  bg-transparent py-5 rounded-xl ">
           <button
             onClick={() => handleCartStatus("available")}
@@ -44,7 +52,7 @@ const AllPlayers = ({ handleCartStatus, isActive }) => {
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
               {allPlayers.map((player) => (
-                <Available key={player.id} player={player} />
+                <Available key={player.id} player={player} disPlaySelectPlayer={disPlaySelectPlayer} />
               ))}
             </div>
           </div>

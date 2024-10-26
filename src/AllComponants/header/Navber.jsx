@@ -3,7 +3,7 @@ import coin from '../../assets/coin.png'
 
 const Navber = () => {
   return (
-    <div className="w-full sticky top-0 bg-white shadow-md z-10">
+    <div className="w-full sticky top-0 bg-white shadow-md z-10 ">
       <div className='w-11/12 mx-auto'>
         <div className="navbar bg-base-100">
           <div className="navbar-start">
