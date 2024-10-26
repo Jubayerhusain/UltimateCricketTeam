@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import Available from "../AvailabePlayers/Available";
 import Selected from "../selectedPlayers/Selected";
-const AllPlayers = ({ handleCartStatus, isActive }) => {
+const AllPlayers = ({ handleCartStatus, isActive, freeCradit, addCoinToFreeCadit }) => {
   //   console.log(handleCartStatus);
   const [allPlayers, setAllPlayers] = useState([]);
   useEffect(() => {
@@ -15,25 +15,33 @@ const AllPlayers = ({ handleCartStatus, isActive }) => {
 
   const [selectedplayers, setSelectedPlayers] = useState([]);
   const disPlaySelectPlayer = (player) => {
-    const existingPlayer = selectedplayers.find(selected => selected.id === player.id);
-    if(existingPlayer){
-      toast.error('Player All ready selected',{
+    const existingPlayer = selectedplayers.find(
+      (selected) => selected.id === player.id
+    );
+    if (player.price > freeCradit) {
+      toast.error("You do not have enough balance to purchase this player!", {
         autoClose: 2000,
-      })
+      });
+      return;
     }
+    if (existingPlayer) {
+      toast.error("Player All ready selected", {
+        autoClose: 2000,
+      });
+    } 
     else if (selectedplayers.length >= 6) {
-      toast.error('You can select only 6 players',{
+      toast.error("You can select only 6 players", {
         autoClose: 2000,
       });
     }
-    else{
-      const addnewPlayer = [...selectedplayers, player]
-    setSelectedPlayers(addnewPlayer);
-    toast.success('Player added successfully', {
-      autoClose: 2000,
-    });
+    else {
+      const addnewPlayer = [...selectedplayers, player];
+      setSelectedPlayers(addnewPlayer);
+      toast.success("Player added successfully", {
+        autoClose: 2000,
+      });
     }
-  }
+  };
   // console.log(selectedplayers);
 
   return (
@@ -52,7 +60,7 @@ const AllPlayers = ({ handleCartStatus, isActive }) => {
             Available
           </button>
           <button
-            onClick={() =>handleCartStatus("selected")}
+            onClick={() => handleCartStatus("selected")}
             className={`${
               isActive.available
                 ? "text-gray-500 bg-gray-100 font-semibold"
@@ -71,12 +79,20 @@ const AllPlayers = ({ handleCartStatus, isActive }) => {
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
               {allPlayers.map((player) => (
-                <Available key={player.id} player={player} disPlaySelectPlayer={disPlaySelectPlayer} />
+                <Available
+                  key={player.id}
+                  player={player}
+                  disPlaySelectPlayer={disPlaySelectPlayer}
+                />
               ))}
             </div>
           </div>
         ) : (
-          <Selected selectedplayers={selectedplayers} handleCartStatus={handleCartStatus} isActive={isActive}/>
+          <Selected
+            selectedplayers={selectedplayers}
+            handleCartStatus={handleCartStatus}
+            isActive={isActive}
+          />
         )}
       </div>
       {/* {isActive.available ? <Available ></Available> : <Selected></Selected>} */}

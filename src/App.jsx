@@ -46,6 +46,8 @@ function App() {
         <div className="w-11/12 mx-auto">
           <AllPlayers
             isActive={isActive}
+            freeCradit={freeCradit}
+            addCoinToFreeCadit={addCoinToFreeCadit}
             handleCartStatus={handleCartStatus}
           ></AllPlayers>
         </div>
