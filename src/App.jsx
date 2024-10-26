@@ -5,6 +5,7 @@ import "./App.css";
 import Navber from "./AllComponants/header/Navber";
 import Banner from "./AllComponants/header/Banner";
 import AllPlayers from "./AllComponants/allPlayers/AllPlayers";
+import Footer from "./AllComponants/FooterContainar/Footer";
 
 function App() {
   const [isActive, setIsActive] = useState({
@@ -37,7 +38,7 @@ function App() {
       </header>
       {/* main section start */}
       <main>
-        <div className="h-[400px] w-11/12 mx-auto">
+        <div className="w-11/12 mx-auto">
           <AllPlayers
             isActive={isActive}
             handleCartStatus={handleCartStatus}
@@ -46,6 +47,9 @@ function App() {
       </main>
       {/* footer section start */}
       <footer>
+        <div className="bottom-0">
+          <Footer></Footer>
+        </div>
       </footer>
     </>
   );
