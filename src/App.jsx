@@ -28,8 +28,8 @@ function App() {
   };
 
   const [freeCradit, setFreeCadit] = useState(0);
-  const addCoinToFreeCadit = (cradit) => {
-    setFreeCadit(freeCradit => freeCradit+cradit)
+  const addCoinToFreeCadit = (craditincrise) => {
+    setFreeCadit(freeCradit => freeCradit + craditincrise);
   };
   console.log(freeCradit);
   return (
@@ -47,7 +47,7 @@ function App() {
           <AllPlayers
             isActive={isActive}
             freeCradit={freeCradit}
-            addCoinToFreeCadit={addCoinToFreeCadit}
+            setFreeCadit={setFreeCadit}
             handleCartStatus={handleCartStatus}
           ></AllPlayers>
         </div>

@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import Available from "../AvailabePlayers/Available";
 import Selected from "../selectedPlayers/Selected";
-const AllPlayers = ({ handleCartStatus, isActive, freeCradit, addCoinToFreeCadit }) => {
+const AllPlayers = ({ handleCartStatus, isActive, freeCradit,setFreeCadit }) => {
   //   console.log(handleCartStatus);
   const [allPlayers, setAllPlayers] = useState([]);
   useEffect(() => {
@@ -23,18 +23,19 @@ const AllPlayers = ({ handleCartStatus, isActive, freeCradit, addCoinToFreeCadit
         autoClose: 2000,
       });
       return;
+    } else {
+      const newCradit = freeCradit - player.price;
+      setFreeCadit(newCradit)
     }
     if (existingPlayer) {
       toast.error("Player All ready selected", {
         autoClose: 2000,
       });
-    } 
-    else if (selectedplayers.length >= 6) {
+    } else if (selectedplayers.length >= 6) {
       toast.error("You can select only 6 players", {
         autoClose: 2000,
       });
-    }
-    else {
+    } else {
       const addnewPlayer = [...selectedplayers, player];
       setSelectedPlayers(addnewPlayer);
       toast.success("Player added successfully", {
